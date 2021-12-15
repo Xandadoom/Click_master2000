@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+  <meta name="keywords" content="my, My, video, Video, game, Game, clips, Clips">
+  <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+	<title>...</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Tajawal:wght@300&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300&family=Marcellus&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+	<!-- Header goes here -->
+	<header>
+		<h1>Try And Complete The Game</h1>
+	</header>
+
+	<!-- Main -->
+	<main>
+  <script type="text/javascript">
+  var clicks2 = 0;
+  var incrementamount = 1;
+   function cps() {
+     clicks2 += incrementamount;
+     document.getElementById("clicks").innerHTML = clicks2;
+      if (clicks2 >= 10 && incrementamount == 1)
+        document.getElementById("Upgrade1").style.visibility = "visible";
+      if (clicks2 >= 1000 && incrementamount == 100)
+        document.getElementById("Upgrade2").style.visibility = "visible";
+      if (clicks2 >= 10000 && incrementamount == 1000)
+        document.getElementById("Upgrade3").style.visibility = "visible";
+      if (clicks2 >= 1.797693134862315E+308 && incrementamount == 1.797693134862315E+308)
+        document.getElementById("Endthegame").style.visibility = "visible";
+   }
+   function upgrade1() {
+     if (clicks2 >= 10)
+      {incrementamount = 100;
+      clicks2 = 0;
+      document.getElementById("clicks").innerHTML = clicks2;
+      document.getElementById("Upgrade1").style.visibility = "hidden";
+     }
+     }
+   
+   function upgrade2() {
+     if (clicks2 >= 1000)
+      {incrementamount = 1000;
+      clicks2 = 0;
+      document.getElementById("clicks").innerHTML = clicks2;
+      document.getElementById("Upgrade2").style.visibility = "hidden";
+     }
+     }
+   
+   function upgrade3() {
+     if (clicks2 >= 10000)
+      {incrementamount = 1.797693134862315E+308;
+      clicks2 = 0;
+      document.getElementById("clicks").innerHTML = clicks2;
+      document.getElementById("Upgrade3").style.visibility = "hidden";
+     }
+   }
+   function endthegame() {
+     if (clicks2 >= 1.797693134862315E+308)
+      window.location.href = "end.html"
+      document.getElementById("clicks").innerHTML = clicks2;
+      document.getElementById("Endthegame").style.visibility = "hidden";
+   }
+ </script>
+ <button type="button" onclick="cps()">Click me</button>
+ <button type="button" id="Upgrade1" onclick="upgrade1()" style="visibility:hidden;">Upgrade to 10 clicks: Need 10 clicks</button>
+ <button type="button" id="Upgrade2" onclick="upgrade2()" style="visibility:hidden;">Upgrade to 100 clicks: Need 100 clicks</button>
+ <button type="button" id="Upgrade3" onclick="upgrade3()" style="visibility:hidden;">Upgrade to 1000 clicks: Need 1000 clicks</button>
+ <button type="button" id="Endthegame" onclick="endthegame()" style="visibility:hidden;">Click to Win!</button>
+ <p>Clicks: <a id="clicks">0</a></p>
+  </main>
+    <!-- Footer -->
+    <footer>&copy; Xander A &bull; 2021
+    </footer>
+  </body>
+</html>
